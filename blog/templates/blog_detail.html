@@ -3,5 +3,7 @@
 {% block content %}
 <h3>{{object.title}}</h3>
 <p>{{object.body}}</p>
-<a href="{%  url 'all_blogs' %}">← Home</a>
+<a href="{%  url 'all_blogs' %}" style="margin-left: 1rem;">Home</a>
+<a href="{% url 'post_edit' object.pk %}" style="margin-left: 1rem;">Edit</a>
+<a href="{% url 'post_delete' object.pk %}" style="margin-left: 1rem;">Delete</a>
 {% endblock content %}
